@@ -1,0 +1,2152 @@
+@import url('../css/fonts.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    font-family: 'RenogareSoft-Regular';
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header{
+    opacity: 0;
+    transition: .5s all;
+}
+
+.cont-loading{
+    position: fixed;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    transition: .5s all;
+}
+
+
+
+#link {color: #E45635;display:block;font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center; text-decoration: none;}
+#link:hover {color: #CCCCCC}
+
+#link, #link:hover {-webkit-transition: color 0.5s ease-out;-moz-transition: color 0.5s ease-out;-ms-transition: color 0.5s ease-out;-o-transition: color 0.5s ease-out;transition: color 0.5s ease-out;}
+
+/** BEGIN CSS **/
+@keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@keyframes loading-text-opacity {
+    0%  {opacity: 0}
+    20% {opacity: 0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+.loading-container,
+.loading {
+    height: 100px;
+    position: relative;
+    width: 100px;
+    border-radius: 100%;
+}
+
+
+.loading-container { 
+    margin: 40px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading {
+    border: 2px solid transparent;
+    border-color: transparent #f73439 transparent #fbf500;
+    -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -o-transform-origin: 50% 50%;
+    -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -webkit-transform-origin: 50% 50%;
+    animation: rotate-loading 1.5s linear 0s infinite normal;
+    transform-origin: 50% 50%;
+}
+
+.loading-container:hover .loading {
+    border-color: transparent #E45635 transparent #E45635;
+}
+.loading-container:hover .loading,
+.loading-container .loading {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#loading-text {
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    color: #ffffff;
+    font-family: "Helvetica Neue, "Helvetica", ""arial";
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 45px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100px;
+}
+
+
+.oshow{
+    opacity: 1;
+}
+
+.ohide{
+    opacity: 0;
+    z-index: 0;
+}
+
+figure{
+    margin: 0;
+}
+
+main{
+    position: relative;
+    background: url('../img/bgmain.png') center / cover;
+    height: 723px;
+    margin-bottom: 25%;
+}
+
+#trigger2{
+    position: absolute;
+    top: -50%;
+}
+
+/* Social Media */
+.whatsapp{
+    position: fixed;
+    padding: 9px 15px;
+    background: #25D366;
+    color: #fff;
+    transition: .5s all;
+    border-radius: 50px 0 0 50px;
+    display: block;
+    margin-bottom: 15px;
+    z-index: 2;
+    top: 30%;
+    right: -105px;
+    box-shadow: -2px 5px 25px -5px rgba(37, 211, 102, 1);
+    animation-delay: .4s;
+}
+
+.whatsapp:hover{
+    color: #fff;
+    right: 0;
+}
+
+.whatsapp i{
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+.facebook{
+    position: fixed;
+    padding: 9px 15px;
+    background: #3b5999;
+    color: #fff;
+    transition: .5s all;
+    border-radius: 50px 0 0 50px;
+    display: block;
+    z-index: 2;
+    top: 40%;
+    right: -105px;
+    box-shadow: -2px 5px 25px -5px rgba(59, 89, 153, 1);
+    animation-delay: .5s;
+}
+
+.facebook:hover{
+    color: #fff;
+    right: 0;
+}
+
+.circle-facebook{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    margin-right: 15px;
+}
+
+.facebook i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    margin: 0;
+}
+
+.d-flex{
+    display: flex;
+    text-align: center;
+}
+
+.smediatext{
+    align-self: center;
+}
+
+
+.taxiLimaIntranet{
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-20%);
+}
+
+.taxiLimaIntranet img{
+    width: 90%;
+}
+
+.textMain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, -50%);
+}
+
+.textMain h1{
+    color: #fff;
+    margin-bottom: 15%;
+    animation-delay: .4s;
+}
+
+.empezarViajar{
+    background: #f73439;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .5s all;
+}
+
+.empezarViajar:hover{
+    background: #fff;
+    color: #f73439;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Servicios */
+.servicios{
+    position: relative;
+    text-align: center;
+    color: #f73439;
+    margin-bottom: 15%;
+}
+
+.servicios h1{
+    padding: 15% 0;
+}
+
+.servicios .container{
+    overflow: hidden;
+}
+
+.servicios .container img{
+    width: 100%;
+    margin-bottom: 25px;
+    transition: .5s all;
+    border-radius: 50%;
+}
+
+.servicios .container img:hover{
+    transform: scale(1.1);
+    box-shadow: -1px 8px 31px -5px rgba(0,0,0,0.75);
+}
+
+.road-Left{
+    position: absolute;
+    top: -30%;
+    left: 0;
+    text-align: left;
+}
+
+.road-Right{
+    position: absolute;
+    top: -50%;
+    right: 0;
+    text-align: right;
+}
+
+@keyframes rollInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.rollInLeft {
+    animation-name: rollInLeft
+}
+
+@keyframes rollInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.rollInRight {
+    animation-name: rollInRight
+}
+
+/* Vuelos */
+.horaVuelos{
+    position: relative;
+    background: url('../img/bghoravuelos.png') center / cover;
+    width: 100%;
+    height: 586px;
+    margin-bottom: 15px;
+}
+
+.conoceHoraVuelos{
+    position: absolute;
+    top: -4%;
+    right: 0;
+    width: 675px;
+    height: 932px;
+    z-index: 1;
+    text-align: right;
+    /* width: 975px;
+    height: 932px; */
+}
+
+.conoceHoraVuelos img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.textHoraVuelos{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -140%);
+    text-align: right;
+    color: #f73439;
+    width: 50%;
+    overflow: hidden;
+}
+
+.textHoraVuelos h3{
+    margin-bottom: 15%;
+}
+
+/* Playa */
+
+.transportePlaya{
+    position: relative;
+    background: url('../img/bgtransporteplaya.jpg') center / cover;
+    width: 100%;
+    height: 586px;
+    margin-bottom: 20px;
+}
+
+.soliciteTransPlaya{
+    position: absolute;
+    top: -4%;
+    left: 0;
+    width: 800px;
+    height: 932px;
+    z-index: 1;
+    text-align: left;
+}
+
+.soliciteTransPlaya img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.textTransportePlaya{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -90%);
+    text-align: left;
+    color: #f73439;
+}
+
+.textTransportePlaya h3{
+    margin-bottom: 15%;
+}
+
+/* Transporte Cine */
+.transporteCine{
+    position: relative;
+    width: 100%;
+    height: 586px;
+    background: url('../img/bgtransportecine.jpg') center / cover;
+    margin-bottom: 15%;
+    overflow: hidden;
+}
+
+.textTranspCine{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-10%, -50%);
+    color: #fbf500;
+    text-align: center;
+    width: 500px;
+}
+
+.textTranspCine p{
+    font-family: 'Aero-Matics-Light';
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+/* Lugares más visitados Lima */
+.lugaresMasVisitadosLima{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #7f7f7f;
+    margin-bottom: 15%;
+}
+
+.lugaresMasVisitadosLima h2{
+    color: #f73439;
+}
+
+.lugaresMasVisitadosLima p{
+    font-family: 'Aero-Matics-Light';
+}
+
+.filtroLugares{
+    font-family: 'Aero-Matics-Light';
+    margin: 10% 0 5% 0;
+}
+
+.filtroLugares a{
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid #7f7f7f;
+    transition: .4s all;
+    padding: 7px 0;
+}
+
+.recomendados, .turisticos, .restaurantes, .hoteles{
+    color: #7f7f7f;
+}
+
+.filtroLugares a.activeLugar{
+    color: #f73439;
+    border-bottom: 1.5px solid #f73439;
+}
+
+.filtroLugares a:hover{
+    color: #f73439;
+}
+
+.filtroLugares a:before{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: #f73439;
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.filtroLugares a:after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 50%;
+    height: 3px;
+    background: #f73439;
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+   
+.filtroLugares a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+    z-index: 1;
+}
+
+.filtroLugares a:hover:before{
+    transform: scaleX(1);
+    transform-origin: right;
+    z-index: 1;
+}
+
+.lugaresRecomendados{
+    position: relative;
+    display: none;
+    flex-wrap: wrap;
+    transition: .5s all;
+}
+
+.lugaresRecomendados,
+.restaurantesRecomendados,
+.hotelesRecomendados,
+.lugaresTuristicos{
+    transform: translate3d(0, -5000px, 0);
+    display: none;
+    transition: .5s all;
+}
+
+.activeLugar{
+    display: flex;
+}
+
+.showLugar{
+    transform: none;
+}
+
+.hideLugar{
+    transform: translate3d(0, 5000px, 0);
+}
+
+
+
+.lugaresLeft,
+.lugaresRight{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+}
+
+.lugaresRecomendados figure img{
+    width: 100%
+}
+
+.first,
+.second{
+    width: 50%;
+    padding: 5px;
+}
+
+.third{
+    width: 100%;
+    padding: 5px;
+}
+
+.fourth{
+    width: 100%;
+    padding: 5px;
+}
+
+.fifth,
+.sixth{
+    width: 50%;
+    padding: 5px;
+}
+
+.spaceBottom{
+    padding-bottom: 10px;
+}
+
+.spaceBottomLarco figcaption{
+    height: 55%;
+}
+
+
+/* Effecto jazz */
+.lugares figure{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.lugares figure figcaption{
+    backface-visibility: hidden;
+}
+
+.lugares figure figcaption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -40%);
+    z-index: -1;
+}
+
+.lugares figure.effect-jazz:hover{
+    background: linear-gradient(-45deg, #181b74 0%,#181b74 100%);
+    opacity: .85;
+    
+}
+
+.lugares figure.effect-jazz:hover figcaption{
+    z-index: 1;
+}
+
+.lugares figure.effect-jazz figcaption::after,
+.lugares figure.effect-jazz img,
+.lugares figure.effect-jazz p {
+	transition: opacity 0.4s, transform 0.4s;
+}
+
+.lugares figure.effect-jazz img {
+    width: 100%;
+	opacity: 0.9;
+}
+
+.lugares figure.effect-jazz h3,
+.lugares figure.effect-jazz p {
+	opacity: 1;
+    -webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+
+.lugares figure.effect-jazz h3 {
+    color: #fff;
+    opacity: 0;
+    transition: transform 0.4s;
+    margin-bottom: 30%;
+}
+
+.lugares figure.effect-jazz:hover img {
+	opacity: 0.7;
+    transform: scale3d(1.5,1.5,1);
+}
+
+.lugares figure.effect-jazz:hover h3,
+.lugares figure.effect-jazz:hover p{
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+.lugares figure.effect-jazz:hover p {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+	-webkit-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+}
+
+/* Espacio para titulos de Imagenes */
+
+.lugares figure.effect-jazz p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+	text-transform: none;
+	font-size: 14px;
+    opacity: 0;
+    font-weight: bold;
+}
+
+.rosanautica{
+    width: 100%;
+    padding: 0 5px 5px;
+}
+
+.marriot{
+    width: 100%;
+    padding: 0 5px 5px;
+}
+
+
+.faro figure.effect-jazz h3,
+.centroLima figure.effect-jazz h3,
+.puentesuspiros figure.effect-jazz h3,
+.parquekennedy figure.effect-jazz h3,
+.sheraton figure.effect-jazz h3,
+.hilton figure.effect-jazz h3,
+
+.campomarte figure.effect-jazz h3,
+.parqueolivar figure.effect-jazz h3,
+.parqueleyendas figure.effect-jazz h3{  
+    margin-bottom: 20%;
+}
+
+.rosanautica figure.effect-jazz h3{
+    margin-bottom: 10%;
+}
+
+.marriot figure.effect-jazz h3{
+    margin-bottom: 10%;
+}
+
+.parqueaguas figure.effect-jazz h3{
+    margin-bottom: 10%;
+}
+
+.turiticosLeft{
+    display: flex;
+    width: 25%;
+    padding: 5px;
+}
+
+.turisticosCenter{
+    display: flex;
+    width: 50%;
+    padding: 5px;
+}
+
+.tcentermd{
+    display: none;
+}
+
+.wrap-turiticosLeft{
+    width: 100%;
+}
+
+.centerBottom{
+    display: flex;
+    width: 100%;
+}
+
+.centerLeft, .centerRight{
+    width: 50%;
+    padding: 5px;
+}
+
+.turisticosRight{
+    display: flex;
+    width: 25%;
+    padding: 5px;
+}
+
+.wrap-turiticosRight{
+    width: 100%;
+}
+
+
+
+.btnReservar{
+    font-family: 'Aero-Matics-Light';
+    background: #f73439;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: .5s all;
+}
+
+.btnReservar i{
+    margin-right: 5px;
+}
+
+.btnReservar:hover{
+    background: #000;
+    color: #f73439;
+}
+/**/
+
+/* Trabaja con Taxi Lima */
+.cont-separetor {
+    padding: 0 20px;
+}
+
+.separetor {
+    width: 100%;
+    height: 1px;
+    background: #f73439;
+}
+
+#formConductores .separetor {
+    background: #fff;
+}
+
+.trabajaConTaxiLima{
+    position: relative;
+    background: url('../img/bgtrabajataxilima.jpg') center / cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.trabajaConTaxiLima .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.textTrabajaTaxiLima{
+    padding-top: 50px;
+}
+
+.trabajaConTaxiLima h1{
+    color: #fbf500;
+    margin-bottom: 2%;
+}
+
+.trabajaConTaxiLima p{
+    color: #fff ;
+}
+
+.formTrabajo{
+    max-width: 350px;
+    margin: auto;
+}
+
+
+.form-control{
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    border: 1px solid #f73439;
+    border-radius: 5px;
+    font-family: 'HelvLightNormal';
+}
+
+.form-control:focus{
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.5);
+} 
+
+.form-control::placeholder{
+    color: #fff;
+}
+
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+}
+
+.form-control:-ms-input-placeholder { /* IE */
+    color: #fff;
+}
+
+/*************/
+
+.consulta .form-control{
+    background: rgba(255, 255, 255);
+    font-size: 14px;
+    border: 1px solid #f73439;
+    border-radius: 5px;
+}
+
+.consulta .form-control:focus{
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 0.2rem rgba(247, 52 ,57, 0.25);
+    font-size: 15px;
+    transition: .4s all;
+} 
+
+.consulta .form-control::placeholder{
+    color: #7f7f7f;
+}
+
+.consulta .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #7f7f7f;
+}
+
+.consulta .form-control:-ms-input-placeholder { /* IE */
+    color: #7f7f7f;
+}
+
+/* Select */
+
+.center {
+	/*position: absolute;
+    display: inline-block;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);*/
+	width: 100%;
+}
+
+
+/** Custom Select **/
+
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+	width: 100%;
+}
+
+.custom-select-wrapper select {
+	display: none;
+}
+
+.custom-select {
+	position: relative;
+	display: inline-block;
+	background: #fff;
+	cursor: pointer;
+	padding: 0;
+}
+
+.custom-select:hover {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.custom-select-trigger {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 7px;
+	/* padding: 0 84px 0 22px; */
+	font-size: 14px;
+	font-weight: 300;
+	color: #f73439;
+	/* line-height: 60px; */
+	/* background: #5c9cd8; */
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.custom-select-trigger:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	right: 5%;
+	margin-top: -3px;
+	border-bottom: 1.5px solid #f73439;
+	border-right: 1.5px solid #f73439;
+	transform: rotate(45deg) translateY(-50%);
+	transition: all .4s ease-in-out;
+	transform-origin: 50% 0;
+}
+
+.custom-select.opened .custom-select-trigger:after {
+	margin-top: 3px;
+	transform: rotate(-135deg) translateY(-50%);
+}
+
+.custom-options {
+	position: absolute;
+	display: block;
+	top: 100%;
+	left: 0;
+	right: 0;
+	min-width: 100%;
+	margin: 15px 0;
+	border: 1px solid #f73439;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, .07);
+	background: #fff;
+	transition: all .4s ease-in-out;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-15px);
+	z-index: 2;
+}
+
+.custom-select.opened .custom-options {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transform: translateY(0);
+}
+
+.custom-options:before {
+	position: absolute;
+	display: block;
+	content: '';
+	bottom: 100%;
+	right: 25px;
+	width: 7px;
+	height: 7px;
+	margin-bottom: -4px;
+	border-top: 1px solid #f73439;
+	border-left: 1px solid #f73439;
+	background: #fff;
+	transform: rotate(45deg);
+	transition: all .4s ease-in-out;
+}
+
+.option-hover:before {
+	background: #f9f9f9;
+}
+
+.custom-option {
+	position: relative;
+	display: block;
+	padding: 0 22px;
+	border-bottom: 1px solid #f73439;
+	font-size: 14px;
+	font-weight: 600;
+	color: #f73439;
+	line-height: 47px;
+	cursor: pointer;
+	transition: all .4s ease-in-out;
+}
+
+.custom-option:first-of-type {
+	border-radius: 4px 4px 0 0;
+}
+
+.custom-option:last-of-type {
+	border-bottom: 0;
+	border-radius: 0 0 4px 4px;
+}
+
+.custom-option:hover,
+.custom-option.selection {
+    background: #f73439;
+    color: #fbf500;
+}
+
+/* Select */
+
+/* Input File */
+/* Custom Input */
+
+#label-cv{
+    background: #fff;
+	color: #f73439;
+    text-align: center;
+    cursor: pointer;
+    height: auto;
+    padding: 8px;
+    transition: .5s all;
+}
+
+.labelContent{
+    background: #fff;
+	color: #f73439;
+	padding: 8px 12px;
+	transition: 0.3s;
+    width: 100%;
+    height: auto;
+	margin-bottom: 0px;
+	border-color: #f73439;
+    border-radius: inherit;
+    cursor: pointer;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.input-cv:hover  #label-cv,
+.input-cv:hover .labelContent{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+
+.alert-licencia,
+.alert-cv,
+.alert-danger{
+    width: 100%;
+    text-align: center;
+}
+
+#file-cv{
+	display: none;
+	/*width: 1px;*/
+}
+/* Input File */
+
+
+/* Trabaja con Taxi Lima */
+
+.line{
+    stroke: #000000;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+/* App */
+.app{
+    position: relative;
+    margin-bottom: 15%;
+    padding: 10% 0;
+}
+
+.app h2{
+    color: #f73439;
+    text-align: center;
+    margin-bottom: 15%;
+}
+
+.roadLeftApp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.roadLeftApp img{
+    width: 60%;
+}
+
+.appTaxiLima{
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    z-index: 1;
+}
+
+.textApptaxiLima{
+    position: absolute;
+    top: -2%;
+    right: -2%;
+    width: 40%;
+}
+
+.textApptaxiLima p i{
+    display: none;
+    color: #f73439;
+}
+
+.textApptaxiLima p{
+    font-family: 'Aero-Matics-Light';
+    margin-bottom: 12%;
+}
+
+.textApptaxiLima a{
+    display: inline-block;
+}
+
+
+/* porqueTaxiLima */
+.line{
+    position: relative;
+    width: 31%;
+    height: 1px;
+    background: #000;
+    display: block;
+    margin: auto;
+}
+
+.porqueTaxiLima{
+    position: relative;
+    text-align: center;
+    margin-bottom: 15%;
+}
+
+.comunicacion{
+    padding-top: 25px;
+}
+
+.porqueTaxiLima h2,
+.porqueTaxiLima h4{
+    color: #f73439;
+}
+
+.porqueTaxiLima h2{
+    margin: 10% 0;
+}
+
+.porqueTaxiLima h4{
+    margin: 10% 0 5% 0;
+}
+
+.porqueTaxiLima p{
+    font-family: 'Aero-Matics-Light';
+}
+
+.imgAppTaxiLimaRpsive{
+    display: none;
+}
+
+
+.btnGooglePlay *{
+    display: inline-block;
+}
+
+.btnGooglePlay{
+    font-family: 'HelvLightNormal';
+    color: #f73439;
+    border: 1px solid #f73439;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    transition: .5s all;
+    max-width: 216px;
+    font-weight: bold;
+}
+
+.btnGooglePlay:hover{
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btnAppStore *{
+    display: inline-block;
+}
+
+.btnAppStore{
+    font-family: 'HelvLightNormal';
+    color: #f73439;
+    border: 1px solid #f73439;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    transition: .5s all;
+    max-width: 216px;
+    font-weight: bold;
+}
+
+.btnAppStore i{
+    font-size: 25px;
+}
+
+.btnAppStore:hover{
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* Consulta Empresas */
+.consultaMain{
+    position: relative;
+    background: #fff;
+    padding: 15% 0 2% 0;
+}
+
+.consulta{
+    position: relative;
+}
+
+.forms-main{
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    max-width: 500px;
+    margin: auto;
+}
+
+.main-animation{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.roadLeftConsulta{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-29%);
+}
+
+.roadRightConsulta{
+    position: absolute;
+    bottom: -42%;
+    right: 0;
+    /* transform: translateY(58%); */
+    text-align: right;
+    z-index: 1;
+}
+
+.contacto{
+    position: relative;
+    /* max-width: 350px; */
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.filtroForms{
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto 10%;
+}
+
+.filtroForms a{
+    font-family: 'Aero-Matics-Light';
+    color: #7f7f7f;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #7f7f7f;
+    cursor: pointer;
+}
+
+.filtroForms a.formActive{
+    color: #f73439;
+    border-bottom: 1.5px solid #f73439;
+}
+
+.filtroForms a:hover{
+    color: #f73439;
+}
+
+.filtroForms a:before{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: #f73439;
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.filtroForms a:after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 50%;
+    height: 3px;
+    background: #f73439;
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+   
+.filtroForms a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+    z-index: 1;
+}
+
+.filtroForms a:hover:before{
+    transform: scaleX(1);
+    transform-origin: right;
+    z-index: 1;
+}
+
+.zOut{
+    animation: zOut 1s ease;
+}
+
+@keyframes zOut {
+    from {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    to {
+      opacity: 0;
+    }
+}
+
+.zIn{
+    animation: zIn 1s ease;
+}
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+}
+
+.contacto h2{
+    color: #f73439;
+    margin-bottom: 15%;
+}
+
+.contacto .separetor{
+    background: #f73439;
+}
+
+textarea{
+    resize: none;
+}
+
+.empresas{
+    position: relative;
+    /* max-width: 450px; */
+    margin: auto;
+    text-align: center;
+    display: none;
+    overflow: hidden;
+}
+
+.empresas h2{
+    color: #f73439;
+    margin-bottom: 5%;
+}
+
+.empresas p{
+    font-family: 'Aero-Matics-Light';
+}
+
+.form-empresa{
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    transition: .5s all;
+}
+
+.form-empresa{
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    transition: .5s all;
+}
+
+.form-consulta{
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    transition: .5s all;
+}
+
+/* Footer */
+footer{
+    position: relative;
+    background: url('../img/bgfooter.png') center / cover;
+    width: 100%;
+    height: 800px;
+    color: #fff;
+}
+
+
+footer .container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-20%);
+}
+
+footer i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.contacto i, .email i{
+    transform: rotate(15deg);
+}
+
+footer a{
+    font-family: 'Aero-Matics-Light';
+    display: block;
+    color: #fff;
+    transition: .4s all;
+}
+
+.logoFooter{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.protocolo-servicio{
+    margin: 30px 0;
+}
+
+footer a:hover{
+    color: rgba(251, 245, 0, .75);
+}
+
+
+.nelica{
+    font-family: 'Aero-Matics-Light';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #d72d32;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.nelica *{
+    display: inline-block;
+}
+
+
+@media (min-width: 1600px){
+    .goDown {
+        position: absolute;
+        bottom: -35%;
+    }
+}
+
+@media (min-width: 1300px){
+    .conoceHoraVuelos{
+        width: 700px;
+    }
+
+    #trigger2{
+        top: -60%;
+    }
+}
+
+@media (min-width: 1200px){
+    .central{
+        max-width: 15%;
+    }
+    
+    .central a,
+    .rpm a,
+    .rpc a,
+    .entel a{
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1200px){
+    .roadLeft {
+        width: 250px;
+        height: 541px;
+    }
+
+    .servicios .row div{
+        margin-bottom: 20px;
+    }
+
+    .appTaxiLima{
+        width: 100%;
+    }
+
+    .imgAppTaxiLima{
+        width: 48%;
+    }
+
+    .textApptaxiLima {
+        top: -3%;
+        right: 11%;
+    }
+
+    .textApptaxiLima p{
+        margin-bottom: 9%;
+    }
+
+    .roadRightConsulta {
+        bottom: -43%;
+    }
+
+    .roadRightConsulta img {
+        width: 70%;
+    }
+
+    .lugares figure.effect-jazz h3{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1199px){
+    .road-Left{
+        top: -10%;
+    }
+
+    .road-Right {
+        top: -30%;
+    }
+
+    footer .container{
+        text-align: center;
+        transform: translateY(-25%);
+    }
+
+    .rpc{
+        margin-bottom: 20px;
+    }
+
+    footer{
+        height: 900px;
+    }
+}
+
+@media (max-width: 1100px){
+
+    .textMain{
+        left: 5%;
+        transform: translate(0%, -50%);
+    }
+
+    h1{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 991px){
+
+    .road-Left {
+        top: -15%;
+    }
+
+    .roadLeft {
+        width: 200px;
+        height: 432px;
+    }
+
+    .road-Right {
+        top: -22%;
+    }
+
+    .roadRight{
+        width: 300px;
+        height: 271px;
+    }
+
+    .lugaresLeft, .lugaresRight{
+        width: 100%;
+    }
+
+    .soliciteTransPlaya{
+        width: 750px;
+    }
+
+    .textApptaxiLima p{
+        font-size: 14px;
+    }
+
+    .btnGooglePlay{
+        margin-bottom: 15px;
+    }
+
+    .btnGooglePlay, .btnAppStore{
+        font-size: 16px;
+    }
+
+    .btnAppStore i {
+        font-size: 19px;
+    }
+
+    .form-control::placeholder{
+        font-size: 13px;
+        color: #fff;
+    }
+    
+    .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        font-size: 13px;
+        color: #fff;
+    }
+    
+    .form-control:-ms-input-placeholder { /* IE */
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .trabajaConTaxiLima p{
+        font-size: 14px;
+    }
+
+    .trabajaConTaxiLima p br{
+        display: none;
+    }
+
+    .trabajaConTaxiLima{
+        height: auto;
+        padding: 20% 0 15% 0;
+    }
+
+    .trabajaConTaxiLima .content{
+        position: relative;
+        text-align: center;
+        top: inherit;
+        left: inherit;
+        transform: inherit;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+    }
+
+    .textTrabajaTaxiLima{
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 3%;
+        text-align: center;    
+    }
+
+    .contentFormConductores{
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+
+    .tcenterxl{
+        display: none;
+    }
+
+    .tcentermd{
+        display: flex;
+        width: 100%;
+    }
+
+    .wrap-turisticosLeft,
+    .wrap-turisticosCenter{
+        width: 100%;
+    }
+
+    .turiticosLeft, .turisticosRight{
+        width: 50%;
+    }
+
+    .roadLeftConsulta img{
+        width: 70%;
+    }
+
+    footer .container{
+        transform: translateY(-30%);
+    }
+
+    .logoFooter{
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .email{
+        max-width: inherit;
+    }
+
+    .roadRightConsulta {
+        bottom: -42%;
+    }
+    
+    .roadRightConsulta img {
+        width: 55%;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .roadLeftApp {
+        top: 40%;
+    }
+
+    .roadLeftApp img {
+        width: 40%;
+    }
+
+    .imgAppTaxiLima {
+        width: 45%;
+    }
+
+    .textApptaxiLima{
+        right: -3%;
+        width: 55%;
+    }
+
+    .lugares figure.effect-jazz h3 {
+        font-size: 22px;
+    }
+
+    .faro figure.effect-jazz h3, .centroLima figure.effect-jazz h3,
+    .puentesuspiros figure.effect-jazz h3, .parquekennedy figure.effect-jazz h3,
+    .sheraton figure.effect-jazz h3, .hilton figure.effect-jazz h3,
+    .campomarte figure.effect-jazz h3, .parqueolivar figure.effect-jazz h3,
+    .parqueleyendas figure.effect-jazz h3 {
+        margin-bottom: 22%;
+    }
+}
+
+@media (max-width: 767px){
+    h1, h2{
+        font-size: 32px;
+    }
+
+    .roadLeft {
+        width: 120px;
+        height: 259px;
+    }
+
+    .road-Right {
+        top: -15%;
+    }
+
+    .roadRight{
+        width: 200px;
+        height: 181px;
+    }
+
+    .facebook{
+        top: 55%;
+    }    
+
+    .horaVuelos{
+        height: 450px;
+    }
+
+    .transportePlaya{
+        height: 450px;
+    }
+
+    .conoceHoraVuelos{
+        width: 550px;
+    }
+
+    .soliciteTransPlaya {
+        top: -2%;
+        width: 550px;
+    }
+
+    .textTransportePlaya{
+        transform: translate(-95%, -150%);
+    }
+
+    .textHoraVuelos{
+        transform: translate(-30%, -192%);
+    }
+
+    .textHoraVuelos h3 {
+        font-size: 24px;
+        margin-bottom: 10%;
+    }
+
+    .textTransportePlaya h3 {
+        font-size: 24px;
+        margin-bottom: 10%;
+    }
+
+    .imgAppTaxiLima {
+        width: 40%;
+    }
+
+    .textApptaxiLima{
+        right: 13px;
+        top: -5%;
+    }
+
+    .rowApps{
+        margin-top: 15px;
+    }
+
+    .textApptaxiLima p {
+        font-size: 12px;
+        margin-bottom: 2%;
+    }
+
+    .lugares figure.effect-jazz p{
+        font-size: 12px;
+    }
+
+    footer a{
+        font-size: 14px;
+    }
+
+    .roadRightConsulta img {
+        width: 45%;
+    }
+
+    .roadLeftConsulta img {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 575px){
+
+    .taxiLimaIntranet{
+        right: 9%;
+        left: inherit;
+        text-align: right;
+        transform: translateX(0%);
+        width: 100%;
+    }
+
+    .facebook{
+        top: 44%;
+    } 
+
+    .taxiLimaIntranet img {
+        width: 75%;
+    }
+
+    .servicios h1 {
+        padding: 20% 0;
+    }
+
+    .servicios .container img{
+        width: auto;
+    }
+
+    .road-Left {
+        top: -6%;
+    }
+
+    .roadLeft {
+        width: 100px;
+        height: 216px;
+    }
+
+    .roadRight {
+        width: 140px;
+        height: 127px;
+    }
+
+    .road-Right {
+        top: -6%;
+    }
+
+    .horaVuelos {
+        height: 300px;
+    }
+
+    .conoceHoraVuelos {
+        width: 350px;
+    }
+
+    .textHoraVuelos {
+        transform: translate(-55%, -285%);
+        width: 100%;
+    }
+
+    .textHoraVuelos h3 {
+        font-size: 17px;
+        margin-bottom: 5%;
+    }
+
+    .textHoraVuelos h3 br{
+        display: none;
+    }
+
+    .transportePlaya{
+        height: 300px;
+    }
+
+    .soliciteTransPlaya{
+        width: 350px;
+    }
+
+    .textTransportePlaya {
+        transform: translate(-75%, -275%);
+        width: 60%;
+    }
+
+    .textTransportePlaya h3{
+        font-size: 17px;
+        margin-bottom: 5%;
+    }
+
+    .textTransportePlaya h3 br{
+        display: none;
+    }
+
+    .textTranspCine{
+        right: inherit;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    .lugares figure.effect-jazz h3{
+        font-size: 16px;
+    }
+
+    .lugares figure.effect-jazz h3 br{
+        display: none;
+    }
+
+    .faro figure.effect-jazz h3, .centroLima figure.effect-jazz h3,
+    .puentesuspiros figure.effect-jazz h3, .parquekennedy figure.effect-jazz h3,
+    .sheraton figure.effect-jazz h3, .hilton figure.effect-jazz h3,
+    .campomarte figure.effect-jazz h3, .parqueolivar figure.effect-jazz h3,
+    .parqueleyendas figure.effect-jazz h3{
+        margin-bottom: 30%;
+    }
+
+    .parqueaguas figure.effect-jazz h3,
+    .marriot figure.effect-jazz h3{
+        margin-bottom: 15%;
+    }
+
+    .rosanautica figcaption{
+        height: 65%;
+    }
+
+    .spaceBottomLarco figcaption{
+        height: 70%;
+    }
+
+    .imgAppTaxiLima {
+        display: none;
+    }
+
+    .roadLeftApp {
+        top: 23.5%;
+    }
+
+    .roadLeftApp img {
+        width: 30%;
+    }
+
+    .imgAppTaxiLimaRpsive {
+        display: block;
+        width: 100%;
+    }
+
+    .textApptaxiLima{
+        position: relative;
+        right: inherit;
+        padding: 10px;
+        margin-top: 50px;
+        width: inherit;
+    }
+
+    .trabajaConTaxiLima h1{
+        font-size: 32px;
+        margin-bottom: 5%;
+    }
+
+    .textApptaxiLima p i{
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .textApptaxiLima p {
+        margin: 15px 0;
+    }
+
+    .consultaMain {
+        padding: 38% 0 2% 0;
+    }
+
+    .filtroForms{
+        padding: 0 15px;
+    }
+    
+    .filtroForms div{
+        margin: 10px 0;
+    }
+
+    .contacto,
+    .empresas{
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 15px;
+    }
+
+    .empresas p br{
+        display: none;
+    }
+
+    .roadLeftConsulta img {
+        width: 30%;
+    }
+
+    footer{
+        height: auto;
+        padding: 60% 0;
+    }
+
+    footer .container{
+        transform: translateY(20%);
+        text-align: center;
+    }
+
+    .central, .rpm, .rpc, .entel, .footer-email{
+        margin: 10px 0;
+    }
+
+    .roadRightConsulta {
+        bottom: -35%;
+    }
+
+    .roadRightConsulta img {
+        width: 40%;
+    }
+
+    main{
+        margin-bottom: 50%;
+    }
+}
+
+
+@media (max-width: 320px){
+    .horaVuelos {
+        height: 250px;
+    }
+    
+    .conoceHoraVuelos {
+        width: 310px;
+    }
+
+    .textHoraVuelos {
+        transform: translate(-55%, -320%);
+        width: 100%;
+    }
+
+    .textHoraVuelos h3, .textTransportePlaya h3{
+        font-size: 16px;
+    }
+
+    .textTransportePlaya {
+        transform: translate(-60%, -340%);
+        width: 75%;
+    }
+
+    .soliciteTransPlaya {
+        width: 305px;
+    }
+
+    .transportePlaya {
+        height: 240px;
+    }
+
+    .btnGooglePlay, .btnAppStore {
+        font-size: 13px;
+    }
+
+    .btnAppStore i {
+        font-size: 16px;
+    }
+
+    .textApptaxiLima{
+        margin-top: 80px;
+    }
+
+    .roadLeftConsulta img {
+        width: 20%;
+    }
+
+    .roadLeftApp {
+        top: 22%;
+    }
+}
+
+@media (max-height: 411px){
+    .facebook{
+        top: 55%;
+    }
+}

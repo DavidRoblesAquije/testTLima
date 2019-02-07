@@ -1,0 +1,439 @@
+/* First Hover Effect*/
+.btnFirstEffect{
+    position: relative;
+    background: #f73439;
+    padding: 10px 20px;
+    /* border: 1px solid #f73439; */
+    border-radius: 5px;
+    transition: .5s all;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    max-width: 220px;
+    animation-delay: .5s;
+}
+
+.btnFirstEffect span {
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    transition: .4s all;
+}
+
+.btnFirstEffect:after,
+.btnFirstEffect:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btnFirstEffect:after {
+    background: #fff;
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+.btnFirstEfect:before {
+    background: #fff;
+    z-index: 5;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnFirstEffect:hover:after {
+    left: calc(0% - 10px);
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnFirstEffect:hover:before {
+    left: calc(0% - 10px);
+    transition: left .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btnFirstEffect:hover span {
+    color: #f73439;
+}
+
+/**/
+.textHoraVuelos a{
+    margin-left: auto;
+}
+
+/* Second Hover Effect */
+.btnSecondEffect{
+    position: relative;
+    background: #fff;
+    padding: 10px 20px;
+    /* border: 1px solid #f73439; */
+    border-radius: 5px;
+    transition: .5s all;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    max-width: 220px;
+    margin-top: 15px;
+}
+
+.btnSecondEffect span {
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: #f73439;
+    transition: .4s all;
+}
+
+.btnSecondEffect:after,
+.btnSecondEffect:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btnSecondEffect:after {
+    background: #f73439;
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+.btnSecondEffect:before {
+    background: #f73439;
+    z-index: 5;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnSecondEffect:hover:after {
+    left: calc(0% - 10px);
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnSecondEffect:hover:before {
+    left: calc(0% - 10px);
+    transition: left .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btnSecondEffect:hover span {
+    color: #fff;
+}
+
+/* Thrid Hover Effect */
+.btnThridEffect{
+    position: relative;
+    background: #fbf500;
+    padding: 10px 20px;
+    border: 1px solid #fbf500;
+    border-radius: 5px;
+    transition: .5s all;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    max-width: 220px;
+    margin: auto;
+}
+
+.btnThridEffect span {
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: #000;
+    transition: .4s all;
+}
+
+.btnThridEffect:after,
+.btnThridEffect:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fbf500;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btnThridEffect:after {
+    background: #000;
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+.btnThridEffect:before {
+    background: #000;
+    z-index: 5;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnThridEffect:hover:after {
+    left: calc(0% - 10px);
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnThridEffect:hover:before {
+    left: calc(0% - 10px);
+    transition: left .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btnThridEffect:hover span {
+    color: #fbf500;
+}
+
+/* Fourth Hover Effect */
+.btnFourthEffect{
+    position: relative;
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid #fbf500;
+    border-radius: 5px;
+    transition: .5s all;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    max-width: 220px;
+    margin: auto;
+}
+
+.btnFourthEffect span {
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: #fbf500;
+    transition: .4s all;
+}
+
+.btnFourthEffect:after,
+.btnFourthEffect:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #000;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btnFourthEffect:after {
+    background: #fbf500;
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+.btnFourthEffect:before {
+    background: #fbf500;
+    z-index: 5;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnFourthEffect:hover:after {
+    left: calc(0% - 10px);
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btnFourthEffect:hover:before {
+    left: calc(0% - 10px);
+    transition: left .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btnFourthEffect:hover span {
+    color: #000;
+}
+
+.btnFourthEffect i{
+    font-size: 20px;
+}
+
+/* Button Forms Hover Effect */
+.btn-forms{
+    position: relative;
+    background: #f73439;
+    color: #fff;
+    box-shadow: -2px 5px 25px -5px rgba(0,0,0,0.5);
+    transition: .5s all;
+    overflow: hidden;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-forms span {
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: .4s all;
+}
+
+.btn-forms:after,
+.btn-forms:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #000;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btn-forms:after {
+    background: #000;
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+.btn-forms:before {
+    background: #000;
+    z-index: 1;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btn-forms:hover:after {
+    left: calc(0% - 10px);
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btn-forms:hover:before {
+    left: calc(0% - 10px);
+    transition: left .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-forms:hover span {
+    color: #f73439;
+}
+
+/* Button Footer Hover Effect */
+.btn-protocolo{
+    position: relative;
+    background: #fff;
+    color: #fff;
+    box-shadow: -2px 5px 25px -5px rgba(0,0,0,0.5);
+    transition: .5s all;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 220px;
+    text-align: center;
+    padding: 6px;
+    font-weight: bold;
+}
+
+.btn-protocolo span {
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #f73439;
+    transition: .4s all;
+}
+
+.btn-protocolo:after,
+.btn-protocolo:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #000;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btn-protocolo:after {
+    background: #f73439;
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+.btn-protocolo:before {
+    background: #f73439;
+    z-index: 1;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btn-protocolo:hover:after {
+    left: calc(0% - 10px);
+    transition: left 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+  
+.btn-protocolo:hover:before {
+    left: calc(0% - 10px);
+    transition: left .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-protocolo:hover span {
+    color: #fff;
+}
+
+/* Button Go Down */
+.goDown{
+    position: absolute;
+    bottom: -20%;
+    color: #f73439;
+    font-size: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s all;
+    cursor: pointer;
+    animation: fade_move_down 2s ease-in-out infinite;
+}
+
+.goDown:hover{
+    color: #000;
+}
+
+@keyframes fade_move_down {
+    0%   { transform:translate(-50%,-20px); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(-50%,20px); opacity: 0; }
+}
+
+@media (max-width: 767px){
+    .btnFirstEffect, .btnSecondEffect{
+        font-size: 14px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 575px){
+    .btnFourthEffect{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 320px){
+    .btnSecondEffect{
+        margin-top: 5px;
+    }
+}

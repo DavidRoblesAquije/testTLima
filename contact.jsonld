@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "http://taxilima.com.pe/",
+  "logo": "http://taxilima.com.pe/img/taxilimaicon.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+01-213-5050",
+    "contactType": "Servicio de Taxi"
+  }]
+}
+</script>

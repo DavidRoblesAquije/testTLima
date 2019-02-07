@@ -1,0 +1,17 @@
+@font-face{
+    font-family: 'RenogareSoft-Regular';
+    src: url('../fonts/RenogareSoft-Regular/RenogareSoft-Regular.eot');
+    src: local('RenogareSoft-Regular'), url('../fonts/RenogareSoft-Regular/RenogareSoft-Regular.woff') format('woff'), 
+    url('../fonts/RenogareSoft-Regular/RenogareSoft-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Aero-Matics-Light';
+    src: url('../fonts/AeroMaticsLight.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'HelvLightNormal';
+    src: url('../fonts/HelvLightNormal.TTF') format('truetype');
+}
+

@@ -1,0 +1,71 @@
+.quienesSomos{
+    position: relative;
+    background: url('../img/bgred.png') center / cover;
+    width: 100%;
+    height: 639px;
+}
+
+.textQuienesSomos{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.textQuienesSomos h1{
+    margin-bottom: 30px;
+}
+
+p{
+    font-family: 'Aero-Matics-Light';
+}
+
+.mision-vision{
+    position: relative;
+    text-align: center;
+    color: #f73439;
+    padding: 6% 0;
+}
+
+.roadRightConsulta {
+    bottom: -106%;
+}
+
+@media (max-width: 991px){
+    .roadRightConsulta {
+        bottom: -104%;
+    }
+}
+
+@media (max-width: 767px){
+    p br{
+        display: none;
+    }
+
+    .roadRightConsulta {
+        bottom: -84%;
+    }
+}
+
+
+@media (max-width: 575px){
+    .textQuienesSomos{
+        transform: translate(-50%, -60%);
+    }
+
+    .mision{
+        margin-bottom: 20px;
+    }
+
+    
+}
+
+@media (max-width: 480px){
+    .roadRightConsulta {
+        bottom: 0;
+        transform: translateY(100%);
+    }
+}
